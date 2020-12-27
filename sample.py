@@ -1,6 +1,12 @@
-import seaborn as sns
-import warnings
-warnings.simplefilter("ignore")  # 不要な警告文を消す
+import seaborn as sns  # こちらにも再度記述
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
-# 利用可能なデータセット一覧を表示
-print(sns.get_dataset_names())
+# アヤメのデータの読み込み ※左のirisは変数名で、右側のirisはirisという花のデータセットを読み込む設定です。
+iris = sns.load_dataset("iris")
+# データに含まれる全ての数値変数同士での散布図を描画
+
+# 今回はirisという変数を渡していますが、Pandasのデータフレーム(DataFrame)型を渡すことで、散布図行列を描画出来ます。
+sns.pairplot(iris)  # 散布図行列
+plt.show()  # こちらはJupyter Notebook上などでは、なくても描画できます
