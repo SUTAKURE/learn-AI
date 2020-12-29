@@ -1,8 +1,9 @@
-from sklearn.linear_model import LinearRegression, Lasso, Ridge
-from sklearn.datasets import load_boston
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import r2_score
 import matplotlib.pyplot as plt
+from sklearn.metrics import r2_score
+from sklearn.model_selection import train_test_split
+from sklearn.datasets import load_boston
+from sklearn.linear_model import LinearRegression, Lasso, Ridge
+<< << << < HEAD
 
 boston = load_boston()
 
